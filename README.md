@@ -81,7 +81,7 @@ Duplicate prevention
 
 Usability issues (auto-formatting bug detected)
 
-####3️⃣ "Reserve" Button Logic
+#### 3️⃣ "Reserve" Button Logic
 
 ###### Validated:
 
@@ -109,7 +109,7 @@ Bug link (when applicable)
 
 #### 4️⃣ Reservation Flow Testing
 
-Validated:
+###### Validated:
 
 Complete reservation process
 
