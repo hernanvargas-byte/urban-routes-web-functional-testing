@@ -1,171 +1,147 @@
 # 🚗 Urban Routes – Web Functional Testing
-### 📌 Project Overview
+
+---
+
+## 📌 Project Overview
 
 This project focuses on web application testing for the Car Sharing functionality of the Urban Routes platform.
 
-#### The scope included:
+### The scope included:
 
-UI testing (design validation)
+- UI testing (design validation)
+- Functional testing
+- Cross-browser testing
+- Test case design
+- Bug reporting in Jira
+- Execution tracking (PASS / FAIL / BLOCKED)
 
-Functional testing
+---
 
-Cross-browser testing
+## 🖥 Test Environments
 
-Test case design
+### Testing was performed in:
 
-Bug reporting in Jira
+- Google Chrome – 800x600 resolution
+- Mozilla Firefox – 1920x1080 resolution
 
-Execution tracking (PASS / FAIL / BLOCKED)
-
-### 🖥 Test Environments
-
-#### Testing was performed in:
-
-Google Chrome – 800x600 resolution
-
-Mozilla Firefox – 1920x1080 resolution
-
-Design testing was executed in both environments.
+Design testing was executed in both environments.  
 Functional logic validation was performed in one environment as required.
 
-### 📋 Test Documentation
+---
+
+## 📋 Test Documentation
 
 All documentation was structured in a single Excel file containing four sheets:
 
-Design Checklist (54+ verification points)
-
-Payment Method & Add Card Functional Checklist
-
-Test Cases – "Reserve" Button Logic
-
-Test Cases – Car Reservation Flow
+- Design Checklist (54+ verification points)
+- Payment Method & Add Card Functional Checklist
+- Test Cases – "Reserve" Button Logic
+- Test Cases – Car Reservation Flow
 
 Each failed test case includes a linked Jira bug report.
 
-### 🔍 Testing Scope
-#### 1️⃣ UI / Design Testing
+---
 
-Layout validation
+## 🔍 Testing Scope
 
-Typography and spelling verification
+### 1️⃣ UI / Design Testing
 
-Element positioning
-
-Map behavior validation
-
-Modal window verification
-
-Cross-browser comparison
+- Layout validation
+- Typography and spelling verification
+- Element positioning
+- Map behavior validation
+- Modal window verification
+- Cross-browser comparison
 
 Critical map-related bugs were identified and documented.
 
-#### 2️⃣ Payment Method & Card Validation
+---
 
-###### Applied:
+### 2️⃣ Payment Method & Card Validation
 
-Equivalence Class Partitioning
+#### Applied:
 
-Boundary Value Analysis
+- Equivalence Class Partitioning
+- Boundary Value Analysis
 
-###### Validated:
+#### Validated:
 
-Card number length and format
+- Card number length and format
+- CVV validation rules
+- Button enable/disable states
+- Multiple card handling
+- Duplicate prevention
+- Usability issues (auto-formatting bug detected)
 
-CVV validation rules
+---
 
-Button enable/disable states
+### 3️⃣ "Reserve" Button Logic
 
-Multiple card handling
+#### Validated:
 
-Duplicate prevention
+- All possible button states
+- Dynamic button text changes
+- Behavior depending on completed fields
+- Positive and negative flows
 
-Usability issues (auto-formatting bug detected)
+#### Structured test cases included:
 
-#### 3️⃣ "Reserve" Button Logic
+- ID
+- Preconditions
+- Steps
+- Expected Results
+- Actual Results
+- Bug link (when applicable)
 
-###### Validated:
+---
 
-All possible button states
+### 4️⃣ Reservation Flow Testing
 
-Dynamic button text changes
+#### Validated:
 
-Behavior depending on completed fields
+- Complete reservation process
+- Cancellation workflow
+- Confirmation modals
+- Dependency on previous defects
+- Correct usage of BLOCKED status when required
 
-Positive and negative flows
+---
 
-###### Used structured test cases including:
+## 🐞 Bug Reporting
 
-ID
+Defects were reported in Jira including:
 
-Preconditions
+- Clear reproduction steps
+- Expected vs Actual results
+- Environment specification
+- Proper severity identification
 
-Steps
+### Critical bugs identified included:
 
-Expected Results
+- Incorrect vehicle orientation on map
+- Map rendering issues
+- Payment validation inconsistencies
+- Incorrect button states
 
-Actual Results
+---
 
-Bug link (when applicable)
+## 🛠 Tools Used
 
-#### 4️⃣ Reservation Flow Testing
+- Excel – Test documentation & execution tracking
+- Jira – Bug reporting and tracking
+- Browser DevTools – UI inspection
+- Cross-browser testing (Chrome & Firefox)
 
-###### Validated:
+---
 
-Complete reservation process
+## 💪 QA Skills Demonstrated
 
-Cancellation workflow
-
-Confirmation modals
-
-Dependency on previous defects
-
-Correct usage of BLOCKED status when required
-
-### 🐞 Bug Reporting
-
-#### Defects were reported in Jira with:
-
-Clear reproduction steps
-
-Expected vs Actual results
-
-Environment specification
-
-Proper severity identification
-
-#### Critical bugs identified included:
-
-Incorrect vehicle orientation on map
-
-Map rendering issues
-
-Payment validation inconsistencies
-
-Incorrect button states
-
-### 🛠 Tools Used
-
-Excel – Test documentation & execution tracking
-
-Jira – Bug reporting and tracking
-
-Browser DevTools – UI inspection
-
-Cross-browser testing (Chrome & Firefox)
-
-### 💪 QA Skills Demonstrated
-
-Web application testing
-
-Cross-browser validation
-
-Functional testing
-
-UI validation
-
-Defect lifecycle handling
-
-Boundary testing
+- Web application testing
+- Cross-browser validation
+- Functional testing
+- UI validation
+- Defect lifecycle handling
+- Boundary testing
 
 Test case structuring
 
