@@ -1,144 +1,66 @@
-# 🚗 Urban Routes – Testing Funcional Web
+# 🚗 Urban Routes - Suite de Pruebas Estructurales y Funcionales Web
 
-## 📌 Descripción del Proyecto
+[![Tipo de Pruebas](https://img.shields.io/badge/tipo--pruebas-funcional--%26--UI-blue.svg)](#)
+[![Documentación](https://img.shields.io/badge/documentacion-Jira--%26--Excel-green.svg)](#)
+[![Metodología](https://img.shields.io/badge/metodologia-caja--negra-orange.svg)](#)
 
-Este proyecto se enfoca en el testing funcional de una aplicación web para la funcionalidad de Car Sharing de la plataforma Urban Routes.
-
-### El alcance incluyó:
-
-- Testing de interfaz de usuario (validación de diseño)
-- Testing funcional
-- Testing cross-browser
-- Diseño de casos de prueba
-- Reporte de bugs en Jira
-- Seguimiento de ejecución (PASS / FAIL / BLOCKED)
+*Read this document in other languages: [English (Inglés)](./README.md)*
 
 ---
 
-## 🖥 Entornos de Prueba
-
-### Las pruebas se realizaron en:
-
-- Google Chrome – Resolución 800x600
-- Mozilla Firefox – Resolución 1920x1080
-
-Las pruebas de diseño fueron ejecutadas en ambos entornos.
-La validación de lógica funcional se realizó en un entorno según lo requerido.
+## 📋 Descripción del Proyecto
+Este repositorio contiene la **Suite de Verificación Integral** y la arquitectura de validación funcional ejecutada sobre el componente de **Car-Sharing de Urban Routes**. El objetivo principal fue desplegar metodologías avanzadas de pruebas de caja negra para validar la convergencia del diseño de la interfaz de usuario, la lógica transaccional de extremo a extremo y la estabilidad del comportamiento en diferentes navegadores en módulos altamente dinámicos.
 
 ---
 
-## 📋 Documentación de Testing
+## 🛠️ Metodologías de Prueba y Técnicas de Ingeniería
 
-Toda la documentación fue estructurada en un único archivo Excel que contiene cuatro hojas:
+Durante la fase de diseño de casos de prueba y validación, se aplicaron técnicas avanzadas de QA para garantizar la máxima cobertura de límites y minimizar la redundancia de ejecución:
 
-- Design Checklist (más de 54 puntos de verificación)
-- Checklist Funcional – Método de Pago y Agregar Tarjeta
-- Casos de Prueba – Lógica del botón "Reservar"
-- Casos de Prueba – Flujo completo de reserva
-
-Cada caso de prueba fallido incluye un enlace al bug reportado en Jira.
+* **Partición de Clases de Equivalencia (ECP):** Dominios de entrada segregados para los perfiles de verificación de pagos (por ejemplo, restricciones de longitud de tarjeta, reglas de formato dinámico personalizadas).
+* **Análisis de Valores Límite (BVA):** Aplicación de restricciones de verificación precisas en entradas numéricas (límites de validación de rango de CVV, límites de texto de titulares de tarjetas de casos límite).
+* **Gestión del Ciclo de Vida de Defectos:** Registro programático de defectos dinámicos traducidos directamente en tickets de defectos estructurales de Jira vinculados con telemetría de replicación clara.
 
 ---
 
-## 🔍 Alcance del Testing
+## 📐 Arquitectura de Pruebas y Estructura del Repositorio
 
-### 1️⃣ Testing de UI / Diseño
+```mermaid
+graph TD
+    A[Repositorio Central] --> B[test-documentation: Matriz de Verificación Maestra]
+    A --> C[bug-reports: Registros de Telemetría Granular]
+    B --> D[Checklists de Excel y Casos de Prueba Centrales]
+    C --> E[Reportes de Errores Listos para Producción en Jira]
+```
 
-Validaciones realizadas:
-
-- Verificación de layout
-- Validación de tipografía y ortografía
-- Posicionamiento de elementos
-- Validación del comportamiento del mapa
-- Verificación de ventanas modales
-- Comparación entre navegadores
-
-Se identificaron y documentaron bugs críticos relacionados con el mapa.
-
----
-
-### 2️⃣ Método de Pago y Validación de Tarjeta
-
-#### Técnicas aplicadas:
-
-- Partición en Clases de Equivalencia
-- Análisis de Valores Límite
-
-#### Validaciones realizadas:
-
-- Longitud y formato del número de tarjeta
-- Reglas de validación del CVV
-- Estados habilitado/deshabilitado de botones
-- Manejo de múltiples tarjetas
-- Prevención de duplicados
-- Problemas de usabilidad (se detectó un bug de autoformato)
+* 📁 `test-documentation/`: Alberga el artefacto de validación maestro (`.xlsx`), estructurando los registros de seguimiento de ejecución divididos en alcances de cobertura específicos:
+  * **Checklist de Diseño:** Más de 54 nodos de verificación de diseño responsivo y tipografía.
+  * **Módulo de Pago:** Matriz estructural para las reglas de validación del flujo de registro de tarjetas.
+  * **Sistema de Reservas:** Condiciones explícitas de prueba funcional que cubren estados de comportamiento positivos, negativos y bloqueados.
+* 📁 `bug-reports/`: Registro histórico que contiene pasos de replicación localizados, variables de entorno y definiciones de severidad.
+* 🛡️ `.gitignore`: Configuración personalizada que evita que la telemetría del entorno, las huellas locales del IDE (`.idea`) y los bloqueos binarios contaminen el repositorio remoto.
 
 ---
 
-### 3️⃣ Lógica del Botón "Reservar"
+## 🖥️ Entornos de Validación Destino
 
-#### Validaciones realizadas:
+Se establecieron matrices de verificación en diferentes navegadores bajo estándares de resolución de pantalla opuestos para aislar inconsistencias de renderizado:
 
-- Todos los posibles estados del botón
-- Cambios dinámicos de texto
-- Comportamiento según campos completados
-- Flujos positivos y negativos
-
-#### Los casos de prueba incluyen:
-
-- ID
-- Precondiciones
-- Pasos
-- Resultados Esperados
-- Resultados Actuales
-- Enlace al bug (cuando aplica)
+| Entorno / Motor | Especificación de Resolución | Enfoque / Alcance de Verificación |
+| :--- | :--- | :--- |
+| **Google Chrome** | `800x600 px` | Maquetación de la Interfaz de Usuario y Límites Responsivos |
+| **Mozilla Firefox** | `1920x1080 px` | Flujo Transaccional Funcional de Extremo a Extremo en Alta Definición |
 
 ---
 
-### 4️⃣ Testing del Flujo de Reserva
+## 🚀 Estándar de Ejecución y Seguimiento
 
-#### Validaciones realizadas:
+Todos los artefactos de verificación despliegan claves de metadatos de seguimiento estructural estándar de la industria:
+* **Mapeo de IDs:** Identificadores únicos y trazables para cada caso de prueba.
+* **Precondiciones:** Requisitos previos de estado obligatorios antes de ejecutar bucles de validación específicos.
+* **Sincronización de Defectos:** Vinculación inmediata a líneas de seguimiento activas en Jira (ID de error) ante fallas en la validación funcional.
 
-- Proceso completo de reserva
-- Flujo de cancelación
-- Modales de confirmación
-- Dependencia de defectos previos
-- Uso correcto del estado BLOCKED cuando fue necesario
-
----
-
-## 🐞 Reporte de Bugs
-
-Los defectos fueron reportados en Jira incluyendo:
-
-- Pasos claros de reproducción
-- Resultado Esperado vs Resultado Actual
-- Especificación del entorno
-- Identificación correcta de severidad
-
-### Bugs críticos identificados:
-
-- Orientación incorrecta del vehículo en el mapa
-- Problemas de renderizado del mapa
-- Inconsistencias en validaciones de pago
-- Estados incorrectos del botón
-
----
-
-## 🛠 Herramientas Utilizadas
-
-- Excel – Documentación y seguimiento de ejecución
-- Jira – Reporte y gestión de defectos
-- Browser DevTools – Inspección de UI
-- Testing cross-browser (Chrome y Firefox)
-
----
-
-## 💪 Habilidades de QA Demostradas
-
-- Testing de aplicaciones web
-- Validación cross-browser
-- Testing funcional
-- Validación de interfaz de usuario
-- Gestión del ciclo de vida de defectos
-- Testing de valores límite
+```bash
+# Para revisar las matrices de seguimiento de ejecución, examine el último lanzamiento dentro de la carpeta:
+cd test-documentation/
+```
